@@ -1,9 +1,0 @@
-{
-  "name": "LuzzIA",
-  "description": "An undetectable AI that sees your screen, hears your calls, and feeds you answers — in real time.",
-  "requestFramePermissions": [
-    "camera",
-    "microphone"
-  ],
-  "prompt": ""
-}

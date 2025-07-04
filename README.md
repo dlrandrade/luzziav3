@@ -1,14 +1,16 @@
-# Run and deploy your AI Studio app
+# LuzzIA PHP Version
 
-This contains everything you need to run your app locally.
+Este projeto é uma versão simplificada em **PHP**, **HTML** e **JavaScript** da antiga aplicação React.
 
-## Run Locally
+## Executando localmente
 
-**Prerequisites:**  Node.js
+1. Certifique-se de ter o PHP instalado.
+2. Execute o servidor embutido do PHP a partir do diretório do projeto:
 
+```bash
+php -S localhost:8000
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+3. Acesse `http://localhost:8000` no navegador.
+
+O chat utiliza uma resposta simulada em `gemini.php`. Substitua a lógica desse arquivo para integrar com a API de sua preferência.
