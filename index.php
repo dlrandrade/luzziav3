@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['role'])) {
 }
 
 $user = $_SESSION['user'] ?? null;
+$messages = $_SESSION['messages'] ?? [];
 $agentId = $_SESSION['agent'] ?? $AGENTS[0]['id'];
 if (isset($_POST['agent'])) {
     $agentId = $_SESSION['agent'] = $_POST['agent'];
@@ -66,7 +67,11 @@ $activeAgent = array_values(array_filter($AGENTS, fn($a) => $a['id'] === $agentI
                 <?php endforeach; ?>
             </select>
         </form>
-        <div id="chat" class="border border-slate-200 rounded p-4 h-96 overflow-y-auto mb-4"></div>
+        <div id="chat" class="border border-slate-200 rounded p-4 h-96 overflow-y-auto mb-4">
+            <?php foreach ($messages as $m): ?>
+                <div class="mb-2"><strong><?php echo htmlspecialchars($m['author']); ?>:</strong> <?php echo htmlspecialchars($m['text']); ?></div>
+            <?php endforeach; ?>
+        </div>
         <form id="chat-form" class="flex gap-2">
             <input type="text" id="message" class="flex-1 border p-2 rounded" placeholder="Digite sua mensagem" required>
             <button class="bg-slate-900 text-white px-4 rounded">Enviar</button>

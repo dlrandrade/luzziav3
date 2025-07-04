@@ -13,4 +13,4 @@ php -S localhost:8000
 
 3. Acesse `http://localhost:8000` no navegador.
 
-O chat utiliza uma resposta simulada em `gemini.php`. Substitua a lógica desse arquivo para integrar com a API de sua preferência.
+O chat utiliza uma resposta simulada em `gemini.php`. Substitua a lógica desse arquivo para integrar com a API de sua preferência. Os agentes e usuários de exemplo ficam definidos em `data.php` e podem ser editados conforme necessário.

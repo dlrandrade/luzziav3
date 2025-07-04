@@ -5,7 +5,10 @@ const input = document.getElementById('message');
 function appendMessage(author, text) {
   const div = document.createElement('div');
   div.className = 'mb-2';
-  div.innerHTML = `<strong>${author}:</strong> ${text}`;
+  const strong = document.createElement('strong');
+  strong.textContent = author + ': ';
+  div.appendChild(strong);
+  div.appendChild(document.createTextNode(text));
   chatBox.appendChild(div);
   chatBox.scrollTop = chatBox.scrollHeight;
 }
