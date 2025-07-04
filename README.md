@@ -13,4 +13,6 @@ php -S localhost:8000
 
 3. Acesse `http://localhost:8000` no navegador.
 
-O chat utiliza uma resposta simulada em `gemini.php`. Substitua a lógica desse arquivo para integrar com a API de sua preferência. Os agentes e usuários de exemplo ficam definidos em `data.php` e podem ser editados conforme necessário.
+O chat utiliza um arquivo `api.php` que encaminha as mensagens para a API definida em `config.php`. Por padrão, existe uma implementação simulada (`gemini.php`) e outra de exemplo (`openai.php`). Para trocar ou adicionar APIs, edite `config.php` e crie novos arquivos seguindo o mesmo padrão.
+
+Os agentes e usuários de exemplo ficam definidos em `data.php`. Lá você também encontra a lista `$ICON_OPTIONS` com diversos ícones da biblioteca [Phosphor Icons](https://phosphoricons.com/) para usar ao criar novos agentes.

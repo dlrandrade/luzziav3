@@ -67,6 +67,10 @@ $activeAgent = array_values(array_filter($AGENTS, fn($a) => $a['id'] === $agentI
                 <?php endforeach; ?>
             </select>
         </form>
+        <div class="flex items-center gap-2 mb-4">
+            <i class="<?php echo htmlspecialchars($activeAgent['icon']); ?> text-xl"></i>
+            <span class="font-semibold"><?php echo htmlspecialchars($activeAgent['name']); ?></span>
+        </div>
         <div id="chat" class="border border-slate-200 rounded p-4 h-96 overflow-y-auto mb-4">
             <?php foreach ($messages as $m): ?>
                 <div class="mb-2"><strong><?php echo htmlspecialchars($m['author']); ?>:</strong> <?php echo htmlspecialchars($m['text']); ?></div>

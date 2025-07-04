@@ -1,4 +1,16 @@
 <?php
+
+$ICON_OPTIONS = [
+    'ph-bold ph-brain',
+    'ph-bold ph-paint-brush',
+    'ph-bold ph-code',
+    'ph-bold ph-robot',
+    'ph-bold ph-chat-circle',
+    'ph-bold ph-lightning',
+    'ph-bold ph-magic-wand',
+    'ph-bold ph-heart',
+];
+
 $AGENTS = [
     [
         'id' => 'sarcastic-genius',

@@ -14,7 +14,7 @@ function appendMessage(author, text) {
 }
 
 async function sendMessage(text) {
-  const res = await fetch('gemini.php', {
+  const res = await fetch('api.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: new URLSearchParams({ text })
